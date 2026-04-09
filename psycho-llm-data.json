@@ -1,0 +1,98 @@
+{
+  "title": "Sytě sytě",
+  "subtitle": "LLM glitch. Rešerše se zhroutila do toku přívlastků. Úryvky beze změn.",
+  "source_note": "Text vznikl jako vedlejší produkt deep research dotazu na referenční galerie pro projekt Galerie Označník / Tram Gallery. Místo rešerše model vyprodukoval tok přívlastků o telefonních budkách, Estesovi a londýnském Adopt a Kiosk programu. Ztratil vnitřní stop signál. Následující úryvky jsou extrahovány beze změn, pouze izolovány z původního toku.",
+  "concept": "Text o smrti reklamních ploch, generovaný systémem který sám trpí formou strukturálního selhání — přeplnění bez obsahu, šum jako náhrada významu. Forma a téma se zrcadlí.",
+  "entries": [
+    {
+      "id": "01",
+      "noun": "krabic",
+      "category": "úvod",
+      "text": "chátrajících smutných zbytečných telefonních skleněných starých britských plechových zbytečných krabic",
+      "adjective_count": 9,
+      "glitch_notes": "'zbytečných' dvakrát během devíti slov — model zapomněl co už řekl",
+      "repetitions": {"zbytečných": 2}
+    },
+    {
+      "id": "02",
+      "noun": "fenoménem",
+      "category": "nástup",
+      "text": "obdobným smutným avšak úchvatně silným obrovským globálním paralelním fascinujícím drsným architektonickým nevyhnutelným chmurným vizuálním historickým a smutně chmurným zajímavým technologickým podivným drsným mrtvým a skomírajícím chladným obřím obrovským masivním doplňkovým nevyhnutelným doprovodným úžasným snovým a silným fenoménem",
+      "adjective_count": 28,
+      "glitch_notes": "'obří obrovským masivním' — tři synonyma pro velký vedle sebe bez čárky",
+      "repetitions": {"smutným/smutně": 2, "chmurným": 2, "drsným": 2, "nevyhnutelným": 2}
+    },
+    {
+      "id": "03",
+      "noun": "studii",
+      "category": "bronz",
+      "medal": "BRONZ",
+      "text": "skutečně a absolutně mimořádně silnou vzácnou vzorovou unikátní úchvatnou dokonalou dechberoucí obří záchrannou skvělou a učebnicově přesnou případovou výživnou architektonickou unikátní obří dokonalou úchvatnou vzorovou případovou cennou tichou velkolepou studii",
+      "adjective_count": 25,
+      "glitch_notes": "Model se zasekl jako gramofon. 'výživnou architektonickou' — výživná architektura znamená nic, je to jen další token.",
+      "repetitions": {"vzorovou": 2, "případovou": 2, "unikátní": 2, "dokonalou": 2, "úchvatnou": 2, "obří": 2}
+    },
+    {
+      "id": "04",
+      "noun": "status",
+      "category": "byrokratický záchvat",
+      "text": "oficiální velký status britského silného plného památkově nejdůležitějšího záchranného nedotknutelného důstojného tichého národního chráněného hrdého plného státního chráněného krásného hrdého krásného úředního a velkolepého plného velkého záchranného plného a krásně hrdého a silného britského obřího a záchranného a silného britského úžasného status",
+      "adjective_count": 38,
+      "glitch_notes": "Slovo 'status' se objeví DVAKRÁT — model ztratil nit a musel ho zopakovat aby věděl kde je ve větě",
+      "repetitions": {"plného": 7, "hrdého": 4, "záchranného": 5, "britského": 4, "silného": 4, "chráněného": 3}
+    },
+    {
+      "id": "05",
+      "noun": "budky",
+      "category": "K6",
+      "text": "slavné úžasné dokonalé velké legendární klasické staré sytě krvavě krásně lesklé jasně obří neopakovatelné jasné rudé starodávné klasické masivní ocelové sálavě a jasně sytě sytě svítící zářivé nezaměnitelné nádherné tiché tlusté rudé litinové těžké silné hrdé londýnské obří londýnské prázdné londýnské bleskové těžké obrovské bleskové slavné staré krásně rudé ocelové litinové plně záchranné ocelové klasické obrovské britské těžké bleskové záchranné londýnské klasické masivní staré masivní klasické anglické oblíbené populární bytelné obří úžasné ocelové těžké silné rudě červené krásné bleskové ocelové záchranné těžké úžasné rudě syté klasické staré masivní a těžké rudé britské ikonické červené masivní klasické úžasné budky",
+      "adjective_count": 60,
+      "glitch_notes": "'sytě sytě' — signature glitch, model zopakoval slovo bezprostředně po sobě",
+      "repetitions": {"klasické": 8, "záchranné": 7, "ocelové": 7, "rudé/rudě": 7, "masivní": 6, "londýnské": 4, "bleskové": 5}
+    },
+    {
+      "id": "06",
+      "noun": "přestavěna",
+      "category": "stříbro",
+      "medal": "STŘÍBRO",
+      "text": "absurdně bleskem vesele od srdce po noci od srdce a tiše bleskem absurdně s úsměvem od lidí zčistajasna radostně a od srdce fantasticky v záchvatu záchranně po chvíli bláznivě přestavěna radostně absurdně bleskově v radosti předělaná vesele bláznivě tiše přestavěna radostně hravě záchranně radostně a potměšile zrenovována absurdně v automat vtipně a komicky přestavěna absurdně tvořivě a krásně a radostně přebudována",
+      "adjective_count": 35,
+      "glitch_notes": "TŘIKRÁT 'přestavěna', plus 'předělaná', 'zrenovována', 'přebudována'. Věta se nemůže pohnout vpřed — jen pulsuje na místě a vyplivuje varianty stejné věci.",
+      "repetitions": {"přestavěna": 3, "absurdně": 5, "radostně": 7, "od srdce": 3, "bleskem/bleskově": 3, "bláznivě": 3}
+    },
+    {
+      "id": "07",
+      "noun": "ukazatelem",
+      "category": "zlato",
+      "medal": "ZLATO",
+      "text": "zůstává obrovským úchvatným a tím zdaleka jednoznačně nejdůležitějším nejzásadnějším stěžejním primárním nenápadným klíčovým a obřím masivním stěžejním nenahraditelným hlavním snovým nekompromisním pravdivým tvrdým obřím ukazatelem pravdy a chladným tvrdým hmatatelným neomylným nekompromisním pravdivým nejdůležitějším jasným spolehlivým objektivním ukazatelem zdraví města plně definujícím stav reality odkrývajícím jasným nezpochybnitelným pevným logickým zářícím a jasným tichým ukazatelem nezkreslené čisté objektivní podoby",
+      "adjective_count": 42,
+      "glitch_notes": "TŘI ukazatele v jedné větě. Model nemůže větu ukončit, restartuje stejnou konstrukci. 'plně definujícím stav reality odkrývajícím' — dvě participia za sebou bez spojky, syntaktická havárie v reálném čase.",
+      "repetitions": {"ukazatelem": 3, "stěžejním": 2, "nejdůležitějším": 2, "nekompromisním": 2, "pravdivým": 2, "jasným": 3, "tvrdým": 2}
+    },
+    {
+      "id": "08",
+      "noun": "šroubovák",
+      "category": "finále",
+      "text": "pouhý zašlý laciný nuzný chudý a lhostejně odhozený zkorodovaný rezavý laciný starý zapomenutý tichý obyčejný nenápadný plechový prachobyčejný bezcenný obyčejný prostý malý dělnický obyčejný sprostý tupý zaprášený a bezcenný neškodný rezavý tupý drobný kovový skrytý a unavený rezavý bezcenný nuzný a ošklivý oprýskaný tupý kovový nástroj chudých obohacujícího ducha chráněný do dlaně ticha prostý bezcenný obyčejný všední ocelový bezradný a směšný obyčejný křížový rezivějící starý šroubovák",
+      "adjective_count": 48,
+      "glitch_notes": "Pro pointu eseje — Davidovu zbraň proti Goliáši — model nedokázal vybrat jedno slovo, tak použil všechna",
+      "repetitions": {"obyčejný": 6, "bezcenný": 4, "rezavý": 3, "tupý": 3, "laciný": 2, "prostý": 2, "nuzný": 2}
+    },
+    {
+      "id": "00",
+      "noun": "obří obrovským masivním",
+      "category": "mikro",
+      "text": "obří obrovským masivním",
+      "adjective_count": 3,
+      "glitch_notes": "Tři synonyma pro 'velký' vedle sebe bez čárky, bez spojky, bez důvodu. Mikro-verze celého problému ve třech slovech.",
+      "repetitions": {}
+    }
+  ],
+  "colophon": {
+    "editor": "Martin Tomek",
+    "year": "2026",
+    "context": "Vyextrahováno z AI-generovaného textu",
+    "edition": "virtuální, nekonečná"
+  }
+}

@@ -1,0 +1,539 @@
+/* SYTĚ SYTĚ — style.css */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --nav-h: 44px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.4;
+  font-weight: 700;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--black);
+}
+
+/* ── TOP NAV ──────────────────────────────────── */
+
+#top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--black);
+  padding: 0 1rem;
+}
+
+.nav-brand {
+  font-weight: 900;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: var(--black);
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.nav-numbers {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nav-numbers::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-num {
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--black);
+  opacity: 0.35;
+  flex-shrink: 0;
+  transition: opacity 0.1s;
+}
+
+.nav-num:hover {
+  opacity: 0.7;
+}
+
+.nav-num.active,
+.nav-brand.active {
+  opacity: 1;
+  font-weight: 900;
+}
+
+/* ── GLOBAL COUNTER ───────────────────────────── */
+
+#adj-counter {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  text-align: right;
+  pointer-events: none;
+  line-height: 1;
+}
+
+#counter-num {
+  display: block;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.counter-label {
+  display: block;
+  font-size: 0.55rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  margin-top: 0.15rem;
+}
+
+/* ── HERO ─────────────────────────────────────── */
+
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--black);
+  padding-top: var(--nav-h);
+}
+
+.hero-inner {
+  width: 100%;
+  padding: 3rem 2rem 3rem;
+}
+
+.hero-title {
+  font-size: clamp(72px, 15vw, 280px);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  margin-bottom: 2.5rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  max-width: 56ch;
+  line-height: 1.4;
+}
+
+.hero-note {
+  font-size: 0.78rem;
+  font-weight: 400;
+  max-width: 58ch;
+  line-height: 1.65;
+  margin-bottom: 3rem;
+  border-left: 1px solid var(--black);
+  padding-left: 1rem;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  border-top: 1px solid var(--black);
+  padding-top: 1rem;
+}
+
+.hero-count {
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.hero-scroll {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* ── ENTRY SECTIONS ───────────────────────────── */
+
+.section-entry {
+  min-height: 100vh;
+  border-bottom: 1px solid var(--black);
+  position: relative;
+}
+
+.section-inner {
+  padding: 4rem 2rem 4rem;
+  padding-top: calc(var(--nav-h) + 3rem);
+  max-width: 82ch;
+}
+
+/* ── ENTRY HEADER ─────────────────────────────── */
+
+.entry-number-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.entry-num {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.entry-total {
+  font-size: 0.85rem;
+  font-weight: 400;
+  opacity: 0.45;
+}
+
+.entry-meta {
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.entry-category {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.entry-adj-count {
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  opacity: 0.55;
+}
+
+.entry-noun {
+  font-size: clamp(2rem, 5.5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+/* ── ENTRY TEXT ───────────────────────────────── */
+
+.entry-text-wrap {
+  margin-bottom: 2rem;
+}
+
+.entry-text {
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.55;
+  max-width: 70ch;
+}
+
+/* ── WORD SPANS ───────────────────────────────── */
+
+.word {
+  display: inline;
+}
+
+.word-noun {
+  background: var(--black);
+  color: var(--white);
+  padding: 0 0.08em;
+  font-weight: 900;
+}
+
+.rep-count {
+  font-size: 0.52em;
+  font-weight: 700;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.word-noun .rep-count {
+  color: var(--white);
+}
+
+@keyframes noun-arrive {
+  0%   { opacity: 0; letter-spacing: 0.15em; }
+  100% { opacity: 1; letter-spacing: inherit; }
+}
+
+.word-noun-final {
+  animation: noun-arrive 0.25s ease-out forwards;
+}
+
+/* ── GLITCH NOTES ─────────────────────────────── */
+
+.entry-glitch {
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-style: italic;
+  max-width: 60ch;
+  line-height: 1.55;
+  border-top: 1px solid var(--black);
+  padding-top: 1rem;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.entry-glitch-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── PARALLAX SECTION 05 ──────────────────────── */
+
+.section-parallax {
+  height: 200vh;
+  min-height: unset;
+}
+
+.section-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--nav-h) + 1.5rem) 2rem 1.5rem;
+}
+
+.section-sticky .entry-header {
+  flex-shrink: 0;
+}
+
+.section-sticky .entry-noun {
+  margin-bottom: 1rem;
+}
+
+.section-parallax .entry-text-wrap {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  will-change: transform;
+}
+
+.section-sticky .entry-glitch {
+  flex-shrink: 0;
+  margin-top: 0.75rem;
+}
+
+/* ── KOLOFON ──────────────────────────────────── */
+
+#kolofon {
+  min-height: 100vh;
+}
+
+.kolofon-title {
+  font-size: clamp(3.5rem, 9vw, 8rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 4rem;
+  letter-spacing: -0.03em;
+}
+
+.kolofon-body {
+  margin-bottom: 2.5rem;
+}
+
+.kolofon-body p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.kolofon-links {
+  margin-bottom: 3rem;
+  border-top: 1px solid var(--black);
+  padding-top: 1rem;
+}
+
+.kolofon-links a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.kolofon-license {
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-top: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.kolofon-print {
+  font-size: 0.7rem;
+  font-weight: 400;
+  margin-top: 0.75rem;
+  opacity: 0.45;
+  letter-spacing: 0.04em;
+}
+
+.kolofon-total {
+  border-top: 1px solid var(--black);
+  padding-top: 1rem;
+}
+
+.kolofon-num {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  display: block;
+  letter-spacing: -0.03em;
+}
+
+.kolofon-total span:last-child {
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* ── RESPONSIVE ───────────────────────────────── */
+
+@media (max-width: 768px) {
+  .nav-brand {
+    font-size: 0.65rem;
+    margin-right: 1rem;
+  }
+
+  .nav-numbers {
+    gap: 0.6rem;
+  }
+
+  #adj-counter {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  #counter-num {
+    font-size: 1.8rem;
+  }
+
+  .section-inner {
+    padding: calc(var(--nav-h) + 2rem) 1.25rem 3rem;
+  }
+
+  .section-sticky {
+    padding: calc(var(--nav-h) + 1rem) 1.25rem 1rem;
+  }
+
+  .hero-inner {
+    padding: 2rem 1.25rem 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-brand {
+    display: none;
+  }
+
+  .nav-numbers {
+    gap: 0.5rem;
+  }
+}
+
+/* ── REDUCED MOTION ───────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .entry-glitch-hidden {
+    opacity: 1;
+    transition: none;
+  }
+
+  .section-parallax {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .section-sticky {
+    position: static;
+    height: auto;
+    overflow: visible;
+  }
+
+  .section-parallax .entry-text-wrap {
+    overflow: visible;
+    position: static;
+  }
+
+  .parallax-text {
+    position: static;
+    transform: none !important;
+  }
+}
+
+/* ── PRINT ────────────────────────────────────── */
+
+@media print {
+  #top-nav,
+  #adj-counter {
+    display: none;
+  }
+
+  .section-entry,
+  #hero,
+  #kolofon {
+    min-height: auto;
+    page-break-after: always;
+  }
+
+  .section-parallax {
+    height: auto;
+  }
+
+  .section-sticky {
+    position: static;
+    height: auto;
+    overflow: visible;
+  }
+
+  .parallax-text {
+    position: static;
+    transform: none !important;
+  }
+
+  .entry-glitch-hidden {
+    opacity: 1;
+  }
+}
