@@ -116,9 +116,6 @@
         <div class="entry-number-line">
           <span class="entry-num">${entry.id}</span>
         </div>
-        <div class="entry-meta">
-          <span class="entry-adj-count">${entry.adjective_count} PŘÍVLASTKŮ</span>
-        </div>
         <h2 class="entry-noun">${escHtml(entry.noun)}</h2>
       </div>`;
 
