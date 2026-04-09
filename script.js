@@ -125,7 +125,6 @@
     <div class="hero-inner">
       <h1 class="hero-title">SYTĚ<br>SYTĚ</h1>
       <p class="hero-subtitle">${escHtml(data.subtitle)}</p>
-      <p class="hero-note">${escHtml(data.source_note)}</p>
       <div class="hero-meta">
         <span class="hero-count">${TOTAL_STR} ZÁZNAMŮ</span>
         <span class="hero-scroll" aria-hidden="true">↓</span>
