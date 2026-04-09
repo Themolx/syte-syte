@@ -155,10 +155,8 @@
       <div class="entry-header">
         <div class="entry-number-line">
           <span class="entry-num">${entry.id}</span>
-          <span class="entry-total" aria-hidden="true">/ ${TOTAL_STR}</span>
         </div>
         <div class="entry-meta">
-          <span class="entry-category">${escHtml(catStr)}</span>
           <span class="entry-adj-count">${entry.adjective_count} PŘÍVLASTKŮ</span>
         </div>
         <h2 class="entry-noun">${escHtml(entry.noun)}</h2>
@@ -198,7 +196,6 @@
   const col = data.colophon;
   kolEl.innerHTML = `
     <div class="section-inner">
-      <h2 class="kolofon-title">KOLOFON</h2>
       <div class="kolofon-body">
         <p>${escHtml(col.editor)}</p>
         <p>${escHtml(col.year)}</p>
@@ -207,12 +204,6 @@
       </div>
       <div class="kolofon-links">
         <p><a href="https://github.com/Themolx/syte-syte" target="_blank" rel="noopener">github.com/Themolx/syte-syte</a></p>
-        <p class="kolofon-license">Odpad nemůže být vlastněn.</p>
-        <p class="kolofon-print">Tisknutelná verze A3: připravujeme.</p>
-      </div>
-      <div class="kolofon-total">
-        <span class="kolofon-num">${TOTAL_ADJ}</span>
-        <span>PŘÍVLASTKŮ CELKEM</span>
       </div>
     </div>`;
 

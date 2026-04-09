@@ -1,7 +1,6 @@
 {
   "title": "Sytě sytě",
-  "subtitle": "LLM glitch. Rešerše se zhroutila do toku přívlastků. Úryvky beze změn.",
-  "source_note": "Text vznikl jako vedlejší produkt deep research dotazu na referenční galerie pro projekt Galerie Označník / Tram Gallery. Místo rešerše model vyprodukoval tok přívlastků o telefonních budkách, Estesovi a londýnském Adopt a Kiosk programu. Ztratil vnitřní stop signál. Následující úryvky jsou extrahovány beze změn, pouze izolovány z původního toku.",
+  "subtitle": "LLM glitch. Nikdo o to neprosil. Rešerše se zhroutila do toku přívlastků. Úryvky beze změn.",
   "concept": "Text o smrti reklamních ploch, generovaný systémem který sám trpí formou strukturálního selhání — přeplnění bez obsahu, šum jako náhrada významu. Forma a téma se zrcadlí.",
   "entries": [
     {
