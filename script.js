@@ -35,7 +35,7 @@
   // Delay after showing word at index idx (before showing idx+1)
   function typeDelay(idx, n) {
     if (n <= 1) return 0;
-    if (idx === n - 2) return 1200; // pause before last word (noun)
+    if (idx === n - 2) return 200; // pause before last word (noun)
     const t = idx / Math.max(n - 2, 1);
     return Math.round(300 * Math.pow(0.1, t));
   }

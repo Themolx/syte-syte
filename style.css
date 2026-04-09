@@ -280,14 +280,6 @@ a {
   color: var(--white);
 }
 
-@keyframes noun-arrive {
-  0%   { opacity: 0; letter-spacing: 0.15em; }
-  100% { opacity: 1; letter-spacing: inherit; }
-}
-
-.word-noun-final {
-  animation: noun-arrive 0.25s ease-out forwards;
-}
 
 /* ── GLITCH NOTES ─────────────────────────────── */
 
