@@ -74,49 +74,10 @@
   const entries = [...data.entries].sort((a, b) => a.id.localeCompare(b.id));
   const TOTAL = entries.length;           // 9
   const TOTAL_STR = String(TOTAL).padStart(2, '0'); // "09"
-  const TOTAL_ADJ = entries.reduce((s, e) => s + e.adjective_count, 0); // 288
 
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Per-section adjective contributions (float, summed for display)
-  const contrib = {};
 
-  function updateCounter() {
-    const val = Object.values(contrib).reduce((s, v) => s + v, 0);
-    const el = document.getElementById('counter-num');
-    if (el) el.textContent = Math.min(Math.round(val), TOTAL_ADJ);
-  }
-
-  // ── Build nav ──────────────────────────────────────────────
-
-  const nav = document.getElementById('top-nav');
-
-  const brand = document.createElement('a');
-  brand.href = '#hero';
-  brand.className = 'nav-brand active';
-  brand.textContent = 'SS';
-  nav.appendChild(brand);
-
-  const navNums = document.createElement('div');
-  navNums.className = 'nav-numbers';
-
-  entries.forEach(e => {
-    const a = document.createElement('a');
-    a.href = `#section-${e.id}`;
-    a.className = 'nav-num';
-    a.dataset.target = `section-${e.id}`;
-    a.textContent = e.id;
-    navNums.appendChild(a);
-  });
-
-  const kolNav = document.createElement('a');
-  kolNav.href = '#kolofon';
-  kolNav.className = 'nav-num';
-  kolNav.dataset.target = 'kolofon';
-  kolNav.textContent = 'KOL';
-  navNums.appendChild(kolNav);
-
-  nav.appendChild(navNums);
 
   // ── Build hero ─────────────────────────────────────────────
 
@@ -222,17 +183,13 @@
     const repetitions = JSON.parse(textEl.dataset.reps);
     const adjCount = parseInt(textEl.dataset.adj);
     const sectionId = textEl.dataset.id;
-    const adjPerWord = adjCount / Math.max(words.length, 1);
 
     // Reduced motion: show all immediately
     if (prefersReduced) {
       textEl.innerHTML = renderStatic(words, nounWords, repetitions);
-      contrib[sectionId] = adjCount;
-      updateCounter();
       return;
     }
 
-    contrib[sectionId] = 0;
     const repTrack = {};
     let i = 0;
 
@@ -262,9 +219,6 @@
       textEl.appendChild(span);
       textEl.appendChild(document.createTextNode(' '));
 
-      // Update global counter
-      contrib[sectionId] += adjPerWord;
-      updateCounter();
 
       const delay = typeDelay(i, words.length);
       i++;
@@ -290,7 +244,6 @@
 
   const p05 = document.getElementById('section-05');
   const p05Entry = entries.find(e => e.id === '05');
-  let p05Contrib = 0;
 
   function updateParallax() {
     if (!p05 || !p05Entry) return;
@@ -300,14 +253,6 @@
     // progress 0 = top of section at bottom of viewport; 1 = bottom of section at top
     const raw = (window.innerHeight - rect.top) / sectionH;
     const clamped = Math.max(0, Math.min(1, raw));
-
-    // Counter contribution
-    const newContrib = clamped * p05Entry.adjective_count;
-    if (Math.abs(newContrib - p05Contrib) >= 0.05) {
-      p05Contrib = newContrib;
-      contrib['05'] = p05Contrib;
-      updateCounter();
-    }
 
     // Text translation inside sticky container
     const textWrap = p05.querySelector('.entry-text-wrap');
@@ -321,19 +266,6 @@
   if (!prefersReduced) {
     window.addEventListener('scroll', updateParallax, { passive: true });
     updateParallax();
-  }
-
-  // ── Active section tracking for nav ───────────────────────
-
-  function setActiveNav(id) {
-    document.querySelectorAll('.nav-num, .nav-brand').forEach(el => {
-      el.classList.remove('active');
-    });
-    if (id === 'hero') {
-      document.querySelector('.nav-brand')?.classList.add('active');
-    } else {
-      document.querySelector(`.nav-num[data-target="${id}"]`)?.classList.add('active');
-    }
   }
 
   const allSections = [
@@ -350,7 +282,6 @@
         best = e;
       }
     });
-    if (best) setActiveNav(best.target.id);
   }, {
     threshold: [0.3, 0.6]
   });
